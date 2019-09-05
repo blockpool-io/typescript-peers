@@ -19,15 +19,15 @@ export class PeerDiscovery {
 			const { body } = await got.get(networkOrHost);
 
 			for (const seed of JSON.parse(body).data) {
-				seeds.push({ ip: seed.ip, port: 4003 });
+				seeds.push({ ip: seed.ip, port: seed.port });
 			}
 		} else {
 			const { body } = await got.get(
-				`https://raw.githubusercontent.com/ArkEcosystem/peers/master/${networkOrHost}.json`,
+				`https://raw.githubusercontent.com/blockpool-io/peers/master/${networkOrHost}.json`,
 			);
 
 			for (const seed of JSON.parse(body)) {
-				seeds.push({ ip: seed.ip, port: 4003 });
+				seeds.push({ ip: seed.ip, port: seed.port });
 			}
 		}
 
