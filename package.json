@@ -1,6 +1,6 @@
 {
 	"name": "@blockpool-io/peers",
-	"version": "0.1.3",
+	"version": "0.2.1",
 	"description": "A simple TypeScript peer discovery client for the Blockpool Blockchain.",
 	"public": true,
 	"homepage": "https://github.com/blockpool-io/typescript-peers",
