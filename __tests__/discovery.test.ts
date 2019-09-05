@@ -78,7 +78,7 @@ describe("PeerDiscovery", () => {
 
 				const peerDiscovery: PeerDiscovery = await PeerDiscovery.new({ networkOrHost: "mainnet" });
 
-				expect(peerDiscovery.getSeeds()).toEqual(dummySeeds.map(peer => ({ ip: peer.ip, port: 4003 })));
+				expect(peerDiscovery.getSeeds()).toEqual(dummySeeds.map(peer => ({ ip: peer.ip, port: 9031 })));
 			});
 
 			it("should fail if a 404 response is received", async () => {
